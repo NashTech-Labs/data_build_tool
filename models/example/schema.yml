@@ -1,0 +1,32 @@
+
+version: 2
+
+models:
+  - name: property_model
+    description: "Property Data"
+    columns:  
+      - name: property_subtype
+        description: "Indicated the Type of Property"
+        tests:
+          - unique
+          - not_null
+
+      - name: total_count
+        description: "Total Count"
+        tests:
+          - not_null
+  
+  - name: highest_property_type
+    description: "Highest Property"
+    columns:
+      - name: property_subtype
+        description: "Indicated the Type of Property"
+        tests:
+          - unique
+          - not_null
+      
+      - name: max_count
+        description: "Maximum count of property_subtype"
+        tests:
+          - not_null
+
